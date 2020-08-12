@@ -21,7 +21,7 @@
 #define CSTR 1.0
 #define NTRN 2
 #define NCOLL 3
-#define DEVICE 1
+#define DEVICE 0
 
 #include "BubbleEnsemble_SystemDefinition.cuh"
 #include "CoupledSystems_PerBlock_Interface.cuh"

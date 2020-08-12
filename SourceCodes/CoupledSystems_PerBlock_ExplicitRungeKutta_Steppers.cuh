@@ -645,7 +645,7 @@ __forceinline__ __device__ Precision ComputeCouplingValue_SingleSystem(\
 
 
 template <int UPS, class Precision>
-__forceinline__ __device__ Precision ImplicitMatrixVectorMultiplication<UPS,Precision>(\
+__forceinline__ __device__ Precision ImplicitMatrixVectorMultiplication(\
 			Precision* gs_CouplingMatrix, \
 			Precision  s_Vector[UPS], \
 			Precision  rD, \
@@ -667,7 +667,7 @@ __forceinline__ __device__ Precision ImplicitMatrixVectorMultiplication<UPS,Prec
 
 
 template <int UPS, class Precision>
-__forceinline__ __device__ void ImplicitNormalTransposeMatrixVectorMultiplication<UPS,Precision>(\
+__forceinline__ __device__ void ImplicitNormalTransposeMatrixVectorMultiplication(\
 			Precision* gs_CouplingMatrix, \
 			Precision  s_p[UPS], \
 			Precision  s_pt[UPS], \

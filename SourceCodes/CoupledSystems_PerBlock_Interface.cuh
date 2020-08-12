@@ -8,6 +8,7 @@
 #include <fstream>
 #include <string>
 #include <cuda_runtime.h>
+#include <typeinfo>
 
 #define gpuErrCHK(call)                                                                          \
 {                                                                                                \
