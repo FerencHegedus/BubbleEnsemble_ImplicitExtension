@@ -18,9 +18,10 @@
 #define FRMIN 20.0
 #define FRMAX 2000.0
 #define FRRES 101
+#define NTRN 512
+#define NCOLL 32
+
 #define CSTR 1.0
-#define NTRN 2
-#define NCOLL 3
 #define DEVICE 0
 
 #include "BubbleEnsemble_SystemDefinition.cuh"
@@ -177,18 +178,18 @@ int main()
 	{
 		for (int cnum=0; cnum<NCOLL; cnum++)
 		{
-			DataFile.width(4); DataFile << sid << ',';
-			DataFile.width(18); DataFile.precision(10); DataFile << ScanSystem.GetHost<PRECISION>(sid, 0, UnitParameters, 15) << ',';
-			DataFile.width(18); DataFile.precision(10); DataFile << ScanSystem.GetHost<PRECISION>(sid, 0, UnitParameters, 16) << ',';
+			DataFile.width(6); DataFile << sid << ',';
+			DataFile.width(17); DataFile.precision(10); DataFile << ScanSystem.GetHost<PRECISION>(sid, 0, UnitParameters, 15) << ',';
+			DataFile.width(17); DataFile.precision(10); DataFile << ScanSystem.GetHost<PRECISION>(sid, 0, UnitParameters, 16) << ',';
 			
 			for (int uid=0; uid<UPS; uid++)
 			{
-				DataFile.width(11); DataFile.precision(3); DataFile << ScanSystem.GetHost<PRECISION>(sid, uid, UnitAccessories, cnum) << ',';
+				DataFile.width(10); DataFile.precision(3); DataFile << ScanSystem.GetHost<PRECISION>(sid, uid, UnitAccessories, cnum) << ',';
 			}
 			
 			for (int uid=0; uid<UPS; uid++)
 			{
-				DataFile.width(11); DataFile.precision(3); DataFile << ScanSystem.GetHost<PRECISION>(sid, uid, UnitAccessories, cnum+NCOLL) << ',';
+				DataFile.width(10); DataFile.precision(3); DataFile << ScanSystem.GetHost<PRECISION>(sid, uid, UnitAccessories, cnum+NCOLL) << ',';
 			}
 			
 			DataFile << '\n';
