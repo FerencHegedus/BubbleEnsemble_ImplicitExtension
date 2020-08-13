@@ -8,3 +8,5 @@ CollapseStrength.exe: CollapseStrength.cu
 
 clean:
 	rm -f CollapseStrength.exe
+	rm -f *.log
+	rm -f *.err

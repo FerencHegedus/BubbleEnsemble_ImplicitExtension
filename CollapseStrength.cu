@@ -18,8 +18,8 @@
 #define FRMIN 20.0
 #define FRMAX 2000.0
 #define FRRES 101
-#define NTRN 512
-#define NCOLL 32
+#define NTRN 2
+#define NCOLL 3
 
 #define CSTR 1.0
 #define DEVICE 0
