@@ -10,4 +10,4 @@
 # export LD_LIBRARY_PATH=/usr/local/cuda-5.0/lib64:$LD_LIBRARY_PATH
 
 #nvidia-smi
-./CollapseStrength.exe
+./Job4.exe
